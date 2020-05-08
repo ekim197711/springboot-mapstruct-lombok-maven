@@ -1,5 +1,6 @@
 package com.example.demo.space;
 
+import com.example.demo.cargo.Fruit;
 import com.example.demo.train.Train;
 import com.example.demo.train.TrainMapper;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,9 @@ public class SpaceShipRestController {
 
     @GetMapping("/spaceship")
     public SpaceShip aSpaceShip(){
+        Train train = new Train("T800", 201.4f, LocalDateTime.now());
+        Fruit fruit = new Fruit("Bananas", 200);
         return trainMapper
-                .trainToSpaceShip(new Train("T800",201.4f, LocalDateTime.now()));
+                .trainToSpaceShip(train, fruit);
     }
 }

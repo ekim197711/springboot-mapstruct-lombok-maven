@@ -14,5 +14,5 @@ public class SpaceShip {
     private Float speed;
     private Double fuel;
     private String fabricationDate;
-
+    private SpaceCargo spaceCargo = new SpaceCargo();
 }

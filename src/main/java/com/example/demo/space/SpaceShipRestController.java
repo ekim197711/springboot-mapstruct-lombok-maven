@@ -16,8 +16,8 @@ public class SpaceShipRestController {
 
     @GetMapping("/spaceship")
     public SpaceShip aSpaceShip(){
-        Train train = new Train("T800", 201.4f, LocalDateTime.now());
-        Fruit fruit = new Fruit("Bananas", 200);
+        Train train = new Train("T800", 2500.0f, LocalDateTime.now());
+        Fruit fruit = new Fruit("Bananas", 100);
         return trainMapper
                 .trainToSpaceShip(train, fruit);
     }
